@@ -1,0 +1,46 @@
+ package com.example.myapplication;
+
+ import androidx.annotation.NonNull;
+ import androidx.room.ColumnInfo;
+ import androidx.room.Entity;
+ import androidx.room.PrimaryKey;
+
+ @Entity(tableName="knowns")
+ public class knowns {
+   @PrimaryKey(autoGenerate=true)
+   @NomNull
+   @ColumnInfo(Name = "knownsId")
+   private int id;
+   @NonNull
+   @ColumnInfo(name = "knownsCreationDate")
+   private String creationDate;
+   @NonNull
+   @ColumnInfo(Name = "knownsName")
+   private String name;
+   @Nonnull
+   @ColumnInfo(name = "knownsLocation")
+   private String location;
+   @NonNull
+   @ColumnInfo(name = "knownsScore")
+   private int score ;
+   }
+
+   public void setId() {
+       return this.id;
+
+   }
+
+   public void setId(int id) {
+      this.id = id;
+   } 
+
+   public String getCreationDate(){
+     return this.creationDate;
+   }
+   
+   public String getName() {
+     return this.name;
+   }
+   public void setName(String name) {
+      this.name = name;
+   }
