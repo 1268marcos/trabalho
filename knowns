@@ -6,7 +6,7 @@
  import androidx.room.PrimaryKey;
 
  @Entity(tableName="knowns")
- public class knowns {
+public class Known {
    @PrimaryKey(autoGenerate=true)
    @NomNull
    @ColumnInfo(Name = "knownsId")
@@ -44,3 +44,27 @@
    public void setName(String name) {
       this.name = name;
    }
+   
+    public String getLocation() {
+        return mLocation;
+    }
+    public void setLocation(String location) {
+        mLocation = location;
+    }
+
+    public int getScore() {
+        return mScore;
+    }
+    public void setScore(int score) {
+        mScore = score;
+    }
+
+   
+public Known(String mName, String mLocation, int mScore, @NonNull String mCreationDate) {
+        this.mName = mName;
+        this.mLocation = mLocation;
+        this.mScore = mScore;
+        this.mCreationDate = mCreationDate;
+    }
+    
+    }
